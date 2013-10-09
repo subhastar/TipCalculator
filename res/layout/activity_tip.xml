@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipActivity" >
+
+    <EditText
+        android:id="@+id/etBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="@string/enter_bill_amount" />
+
+    <Button
+        android:id="@+id/btFifteen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btTen"
+        android:layout_centerHorizontal="true"
+        android:text="@string/fifteen_percent" />
+
+    <Button
+        android:id="@+id/btTwenty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btFifteen"
+        android:layout_toRightOf="@+id/btFifteen"
+        android:text="@string/twenty_percent" />
+
+    <Button
+        android:id="@+id/btTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btFifteen"
+        android:text="@string/ten_percent" />
+
+    <TextView
+        android:id="@+id/tvTipIs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btFifteen"
+        android:layout_below="@+id/btFifteen"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="87dp"
+        android:text="@string/tip_is"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTipIs"
+        android:layout_alignBottom="@+id/tvTipIs"
+        android:layout_alignRight="@+id/btTwenty"
+        android:text=""
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tvTotalIs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTipIs"
+        android:layout_below="@+id/tvTipAmount"
+        android:layout_marginTop="18dp"
+        android:textSize="26sp"
+        android:text="@string/total_amount" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTotalIs"
+        android:layout_alignBottom="@+id/tvTotalIs"
+        android:layout_alignRight="@+id/tvTipAmount"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btFifteen"
+        android:layout_centerHorizontal="true"
+        android:text="@string/custom" />
+
+    <EditText
+        android:id="@+id/etCustomTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etBillAmount"
+        android:layout_below="@+id/etBillAmount"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="@string/custom_tip" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
